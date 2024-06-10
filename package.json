@@ -14,6 +14,7 @@
     "@angular/router": "~17.3.0",
     "@nativescript/angular": "^17.0.0",
     "@nativescript/core": "~8.7.0",
+    "@nativescript/geolocation": "^8.3.1",
     "@nativescript/theme": "~3.0.2",
     "rxjs": "~7.8.0",
     "zone.js": "~0.14.0"
@@ -21,9 +22,13 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~17.3.0",
     "@angular/compiler-cli": "~17.3.0",
+    "@nativescript/android": "8.7.0",
     "@nativescript/types": "~8.7.0",
     "@nativescript/webpack": "~5.0.19",
     "@ngtools/webpack": "~17.3.0",
     "typescript": "~5.4.0"
+  },
+  "resolutions": {
+    "com.google.android.gms:play-services-location": "18.0.0"
   }
 }

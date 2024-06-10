@@ -1,3 +1,17 @@
-<GridLayout>
-  <page-router-outlet></page-router-outlet>
-</GridLayout>
+<StackLayout>
+  <Button text="Save Location" (tap)="saveLocation()"></Button>
+  <Button text="Push to Database" (tap)="pushToDatabase()"></Button>
+  <Button text="Open/Save File" (tap)="openOrSaveFile()"></Button>
+
+  <Label text="Locations:" class="h2"></Label>
+  <ListView [items]="locations" height = "500">
+    <ng-template let-location="item" let-i="index">
+      <StackLayout>
+        <Label [text]="'Latitude: ' + location.latitude"></Label>
+        <Label [text]="'Longitude: ' + location.longitude"></Label>
+        <TextField [(ngModel)]="location.address" hint="Enter address"></TextField>
+        <Button text="Delete" (tap)="deleteLocation(i)"></Button>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+</StackLayout>
